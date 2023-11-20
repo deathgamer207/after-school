@@ -1,15 +1,15 @@
-var webstore = new Vue({
+var webstore = new Vue({ // Create a new Vue instance and bind it to the element with the id 'app'
     el: '#app',
-    data: {
+    data: {  // The data object contains the properties used in the template
         sitename: ' After school activities',
-        products: products,
-        searchQuery: '',
+        products: products,  // The array of products to display
+        searchQuery: '',  // The user's search query for filtering products
         selectedCategory: '',
         categories: ['price', 'location', 'subject', 'availablespace'],
-        isAscending: true,
+        isAscending: true, // Flag to determine sorting order (ascending or descending)
         cart: [],
         showProduct: true,
-        order: {
+        order: { // The order object to store order details
             firstName: '',
             lastName: '',
             address: '',
