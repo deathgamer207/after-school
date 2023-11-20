@@ -31,7 +31,7 @@
 
             <div id="app">
                 <div>
-                    <label for="category">Select Category:</label>
+                    <label for="category">Select Category:</label><!--This is a string that will store the value of the currently selected category in the select element. It is initially set to an empty string.-->
                     <select id="category" v-model="selectedCategory">
                         <option value="">All Categories</option>
                         <option v-for="category in categories" :key="category" :value="category">{{ category }}</option>
@@ -50,7 +50,7 @@
                     <figure>
                         <img v-bind:src="product.image" width="90" height="100">
                     </figure>
-                    <p v-html="product.location"></p>
+                    <p v-html="product.location"></p><!--The product name and price are displayed using the {{ product.name }} and {{ product.price }} syntax, which is a shorthand for the v-text directive.-->
                     <p v-html="product.subject"></p>
                     <p>Price: {{ product.price }}</p>
                     <p>Available space: {{product.availablespace - cartCount(product.id) }}</p>
