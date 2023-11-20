@@ -145,11 +145,11 @@
                     </div>
                 </form>
 
-                <div v-if="cart.length > 0">
+                <div v-if="cart.length > 0"><!-- Display the cart only if it contains items -->
                     <ul>
-                      <li v-for="(item, index) in cart" :key="index">
+                      <li v-for="(item, index) in cart" :key="index"><!-- Iterate over each item in the cart using v-for -->
                         {{ item.name }} - ${{ item.price }}
-                        <button @click="removeFromCart(index)">Remove</button>
+                        <button @click="removeFromCart(index)">Remove</button><!-- Button to remove the item from the cart, triggers removeFromCart method -->
                       </li>
                     </ul>
                   </div>
