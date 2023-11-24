@@ -62,7 +62,7 @@ var webstore = new Vue({ // Create a new Vue instance and bind it to the element
 
             const field = this.selectedCategory || 'price'
 
-            const productsArray = this.products.filter(p => p.title.includes(this.searchQuery));
+            const productsArray = this.products.filter(p => p.title.includes(this.searchQuery) || p.location.includes(this.searchQuery));
 
             function compare(a, b) {
 
